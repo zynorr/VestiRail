@@ -138,13 +138,28 @@ browser has no injected wallet. They require a funded testnet wallet.
 
 ## Deploy to Vercel
 
-`vercel.json` at the repository root builds the `frontend/` workspace and serves
-the SPA, so the Vercel import needs no manual build settings.
+The app is a Vite SPA inside `frontend/`, so there are two supported setups.
+Pick one; do not mix them, because the commands are relative to the root
+directory Vercel builds from.
+
+**Root Directory = `frontend` (recommended).** `frontend/vercel.json` supplies
+the whole configuration (`npm ci`, `npm run build`, `dist`).
 
 1. Open [vercel.com/new](https://vercel.com/new) and import `zynorr/VestiRail`.
-2. Keep the detected project settings as they are: root directory at the
-   repository root, framework Vite, and the commands from `vercel.json`.
-3. Click **Deploy**. No environment variables are required.
+2. Set **Root Directory** to `frontend`.
+3. In Settings -> Build & Deployment, clear any custom **Install Command**,
+   **Build Command** or **Output Directory** values so the `vercel.json` in that
+   directory is used instead. A leftover `cd frontend && npm ci` install command
+   fails with `cd: frontend: No such file or directory`.
+4. Click **Deploy**. No environment variables are required.
+
+**Root Directory = repository root.** The root `vercel.json` then runs the same
+commands with a `cd frontend` prefix and serves `frontend/dist`; leave the
+detected settings alone.
+
+The frontend imports the shared formula from `../shared/vesting.ts`, so keep
+**Include source files outside of the Root Directory in the Build Step** enabled
+if the build cannot resolve that import.
 
 Deployments read the chain directly from `https://rpc.bohr.life`, which allows
 browser CORS; `npm run dev` still uses the same-origin `/rpc` proxy. Every push
