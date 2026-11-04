@@ -136,6 +136,22 @@ Signing flows (claim, approval, schedule creation, batch execution) are wired to
 the deployed contract but could not be executed end-to-end here because the test
 browser has no injected wallet. They require a funded testnet wallet.
 
+## Deploy to Vercel
+
+`vercel.json` at the repository root builds the `frontend/` workspace and serves
+the SPA, so the Vercel import needs no manual build settings.
+
+1. Open [vercel.com/new](https://vercel.com/new) and import `zynorr/VestiRail`.
+2. Keep the detected project settings as they are: root directory at the
+   repository root, framework Vite, and the commands from `vercel.json`.
+3. Click **Deploy**. No environment variables are required.
+
+Deployments read the chain directly from `https://rpc.bohr.life`, which allows
+browser CORS; `npm run dev` still uses the same-origin `/rpc` proxy. Every push
+to `main` redeploys production, and pull requests get their own preview URLs.
+The app talks to BOT Chain Testnet (chain 968), so wallet actions still happen
+in the visitor's own wallet.
+
 ## Design guarantees
 
 - **Exact funding.** Native batches require `msg.value == sum`; ERC-20 batches

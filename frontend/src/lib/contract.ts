@@ -5,11 +5,16 @@ import { vestedAmount } from "../../../shared/vesting";
 import { CONFIG, NATIVE } from "./config";
 import type { ChainEvent, Schedule, TokenMeta, Workspace } from "./types";
 
-export const readProvider = new JsonRpcProvider(
-  `${window.location.origin}/rpc`,
-  CONFIG.chainId,
-  { staticNetwork: true, batchMaxCount: 12 },
-);
+// The public RPC returns permissive CORS headers, so deployed builds read it
+// directly. `vite dev` keeps using the same-origin `/rpc` proxy.
+const rpcEndpoint = import.meta.env.DEV
+  ? `${window.location.origin}/rpc`
+  : CONFIG.rpcUrl;
+
+export const readProvider = new JsonRpcProvider(rpcEndpoint, CONFIG.chainId, {
+  staticNetwork: true,
+  batchMaxCount: 12,
+});
 
 export const manager = new Contract(CONFIG.manager, vestingManagerAbi, readProvider);
 

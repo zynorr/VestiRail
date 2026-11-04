@@ -64,7 +64,7 @@ export function Settings() {
               </div>
               <div className="data-row">
                 <dt>RPC endpoint</dt>
-                <dd className="mono-sm">/rpc → rpc.bohr.life</dd>
+                <dd className="mono-sm">rpc.bohr.life</dd>
               </div>
               <div className="data-row">
                 <dt>VestingManager</dt>
