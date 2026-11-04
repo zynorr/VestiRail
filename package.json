@@ -1,0 +1,27 @@
+{
+  "name": "bot-vesting-manager",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BOT Chain vesting manager (Milestone 1): native BOT and ERC-20 token vesting with cliff + linear schedules.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network botTestnet",
+    "demo:testnet": "hardhat run scripts/demo-testnet.ts --network botTestnet"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-ethers": "^3.1.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.1.0",
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.2",
+    "chai": "^4.5.0",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.4",
+    "hardhat": "2.29.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}

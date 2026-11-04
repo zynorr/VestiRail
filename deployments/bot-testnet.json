@@ -1,0 +1,261 @@
+{
+  "network": "botTestnet",
+  "chainId": "968",
+  "rpcUrl": "https://rpc.bohr.life",
+  "explorer": "https://scan.bohr.life",
+  "deployedAt": "2026-11-04T10:14:19.683Z",
+  "deployer": "0xd61fDaAb767bB60D87739529cBf489C14C336148",
+  "solc": "0.8.24",
+  "contracts": {
+    "VestingManager": {
+      "address": "0x6867b3EfC1a393fB165285d33daAAe6539FF682b",
+      "txHash": "0xc2c9d713a118863bb158d44af5d6255e368539004dacb93e333b9125275a78ab",
+      "blockNumber": 29237029,
+      "gasUsed": "1316555",
+      "explorerUrl": "https://scan.bohr.life/address/0x6867b3EfC1a393fB165285d33daAAe6539FF682b"
+    },
+    "DemoERC20": {
+      "address": "0x199201717E6e78cDDb6ffA1617E646cf4648f5b6",
+      "txHash": "0x78bd76c953c20c5096bebe2cc5da5f966fc58af4c3e195cd6eb5a5eec88f5cbd",
+      "blockNumber": 29237034,
+      "gasUsed": "475088",
+      "explorerUrl": "https://scan.bohr.life/address/0x199201717E6e78cDDb6ffA1617E646cf4648f5b6",
+      "name": "BOT Vesting Demo Token",
+      "symbol": "vBOT",
+      "decimals": 18
+    }
+  },
+  "demo": {
+    "startedAt": "2026-11-04T10:14:25.670Z",
+    "rpcUrl": "https://rpc.bohr.life",
+    "beneficiaries": [
+      {
+        "address": "0x7D4fA25f674606f07d2fEB21938871Da6C95069F",
+        "role": "partial claims, beneficiary transfer"
+      },
+      {
+        "address": "0x15C450B5C09eb80c783102215fa5aAd4AC92a24F",
+        "role": "fully vested claim, receives transferred schedule"
+      },
+      {
+        "address": "0xB94d0A7e9A41177D333A51757777B2d2B85FE230",
+        "role": "early-claim rejection"
+      }
+    ],
+    "transactions": [
+      {
+        "label": "Fund 0x7D4fA25f674606f07d2fEB21938871Da6C95069F with 0.03 BOT for gas",
+        "hash": "0x34660d773c5d79f422c8a33b77f9f8e38cdad2c5f1b9825284b643d2ad4085d1",
+        "url": "https://scan.bohr.life/tx/0x34660d773c5d79f422c8a33b77f9f8e38cdad2c5f1b9825284b643d2ad4085d1",
+        "blockNumber": 29237049,
+        "gasUsed": "21000"
+      },
+      {
+        "label": "Fund 0x15C450B5C09eb80c783102215fa5aAd4AC92a24F with 0.03 BOT for gas",
+        "hash": "0xb33f3832f29f7cdd64a637cd5ffa6e510665a56d1deb95052731308bacee3fef",
+        "url": "https://scan.bohr.life/tx/0xb33f3832f29f7cdd64a637cd5ffa6e510665a56d1deb95052731308bacee3fef",
+        "blockNumber": 29237052,
+        "gasUsed": "21000"
+      },
+      {
+        "label": "Fund 0xB94d0A7e9A41177D333A51757777B2d2B85FE230 with 0.03 BOT for gas",
+        "hash": "0x619f3bf9347ae1e32bff08953003324ab031434de7928884f87f0590f919f328",
+        "url": "https://scan.bohr.life/tx/0x619f3bf9347ae1e32bff08953003324ab031434de7928884f87f0590f919f328",
+        "blockNumber": 29237054,
+        "gasUsed": "21000"
+      },
+      {
+        "label": "Create 3 native schedules with exact funding",
+        "hash": "0x22cc39942c32052663c80b0456d530348f015210e56e90ebd08dc65de22500ca",
+        "url": "https://scan.bohr.life/tx/0x22cc39942c32052663c80b0456d530348f015210e56e90ebd08dc65de22500ca",
+        "blockNumber": 29237059,
+        "gasUsed": "400049"
+      },
+      {
+        "label": "Beneficiary 2 claims fully vested schedule",
+        "hash": "0x86f196e14576231695522acc8de9897ce73b73ddf7462d81bb77935d2f609e17",
+        "url": "https://scan.bohr.life/tx/0x86f196e14576231695522acc8de9897ce73b73ddf7462d81bb77935d2f609e17",
+        "blockNumber": 29237065,
+        "gasUsed": "87400"
+      },
+      {
+        "label": "Beneficiary 1 partial claim #1 (mid-vesting)",
+        "hash": "0x14d57963118bf13515fa262f5c4e366a84bf8d009979764a9dd3471b9f9e509c",
+        "url": "https://scan.bohr.life/tx/0x14d57963118bf13515fa262f5c4e366a84bf8d009979764a9dd3471b9f9e509c",
+        "blockNumber": 29237069,
+        "gasUsed": "70533"
+      },
+      {
+        "label": "Beneficiary 1 partial claim #2 (25s later)",
+        "hash": "0xca3874870d7ceceb40a55deec9c86b29d7c981404fe7478ac7e6aeb3d951e319",
+        "url": "https://scan.bohr.life/tx/0xca3874870d7ceceb40a55deec9c86b29d7c981404fe7478ac7e6aeb3d951e319",
+        "blockNumber": 29237108,
+        "gasUsed": "53433"
+      },
+      {
+        "label": "Beneficiary 1 transfers schedule to beneficiary 2",
+        "hash": "0xe38f9c1ff35471eba2810e550da758c53ab8a2acadd0cd831d25b9c50c550098",
+        "url": "https://scan.bohr.life/tx/0xe38f9c1ff35471eba2810e550da758c53ab8a2acadd0cd831d25b9c50c550098",
+        "blockNumber": 29237114,
+        "gasUsed": "60340"
+      },
+      {
+        "label": "New beneficiary claims the transferred schedule",
+        "hash": "0xaa579903765778d6a41bf2b287f2ec45ab9b10fedeceb99153aab9e398c7c7e5",
+        "url": "https://scan.bohr.life/tx/0xaa579903765778d6a41bf2b287f2ec45ab9b10fedeceb99153aab9e398c7c7e5",
+        "blockNumber": 29237118,
+        "gasUsed": "53433"
+      },
+      {
+        "label": "Mint 100 vBOT to deployer",
+        "hash": "0x9f00d07699aa8b75ebeb31b0b80db52c3f12d3a3a3d89ca9a2744268b2707f7b",
+        "url": "https://scan.bohr.life/tx/0x9f00d07699aa8b75ebeb31b0b80db52c3f12d3a3a3d89ca9a2744268b2707f7b",
+        "blockNumber": 29237122,
+        "gasUsed": "68293"
+      },
+      {
+        "label": "Approve 14 vBOT (deliberately 1 short)",
+        "hash": "0xe2f9c5c1c1d36f1737a6fd367176a517d3d8c63876b7591b600a92298051909a",
+        "url": "https://scan.bohr.life/tx/0xe2f9c5c1c1d36f1737a6fd367176a517d3d8c63876b7591b600a92298051909a",
+        "blockNumber": 29237126,
+        "gasUsed": "46152"
+      },
+      {
+        "label": "Approve exact 15 vBOT",
+        "hash": "0xd3d1660ff4775e64030890ea93bbcff6fca0e33c7115392ff93ae21abcbee2ea",
+        "url": "https://scan.bohr.life/tx/0xd3d1660ff4775e64030890ea93bbcff6fca0e33c7115392ff93ae21abcbee2ea",
+        "blockNumber": 29237130,
+        "gasUsed": "29052"
+      },
+      {
+        "label": "Create 2 ERC-20 schedules with exact funding",
+        "hash": "0xa636ee40174a75e462dc3e725617ecae5a3b01f4b004cbc4a0c4fdf84a2da59b",
+        "url": "https://scan.bohr.life/tx/0xa636ee40174a75e462dc3e725617ecae5a3b01f4b004cbc4a0c4fdf84a2da59b",
+        "blockNumber": 29237134,
+        "gasUsed": "304454"
+      },
+      {
+        "label": "Beneficiary 1 partial ERC-20 claim",
+        "hash": "0x5955afcf527b76d89d00712b3d9c2e56c7cafc5a6b4d44007498620fb06356d5",
+        "url": "https://scan.bohr.life/tx/0x5955afcf527b76d89d00712b3d9c2e56c7cafc5a6b4d44007498620fb06356d5",
+        "blockNumber": 29237139,
+        "gasUsed": "114142"
+      },
+      {
+        "label": "Beneficiary 3 full ERC-20 claim",
+        "hash": "0x544e0f775fa61cb371ba45022a62245484ed19ad3a9b59316b3f9037d8f0eac0",
+        "url": "https://scan.bohr.life/tx/0x544e0f775fa61cb371ba45022a62245484ed19ad3a9b59316b3f9037d8f0eac0",
+        "blockNumber": 29237144,
+        "gasUsed": "96809"
+      }
+    ],
+    "revertChecks": [
+      {
+        "label": "Native batch under-funded by 1 wei",
+        "revertedWith": "IncorrectFunding",
+        "args": [
+          "1750000000000000000",
+          "1749999999999999999"
+        ]
+      },
+      {
+        "label": "Beneficiary 3 claims before the schedule starts",
+        "revertedWith": "NothingToClaim",
+        "args": [
+          "3"
+        ]
+      },
+      {
+        "label": "Old beneficiary tries to claim after transferring",
+        "revertedWith": "NotBeneficiary",
+        "args": [
+          "0x7D4fA25f674606f07d2fEB21938871Da6C95069F",
+          "1"
+        ]
+      },
+      {
+        "label": "ERC-20 batch creating 15 vBOT of schedules with 14 funded",
+        "revertedWith": "InsufficientAllowance",
+        "args": [
+          "0xd61fDaAb767bB60D87739529cBf489C14C336148",
+          "0x6867b3EfC1a393fB165285d33daAAe6539FF682b",
+          "14000000000000000000",
+          "15000000000000000000"
+        ]
+      },
+      {
+        "label": "Beneficiary 3 claims the fully paid ERC-20 schedule again",
+        "revertedWith": "NothingToClaim",
+        "args": [
+          "5"
+        ]
+      }
+    ],
+    "parityChecks": [
+      {
+        "scheduleId": "2",
+        "asset": "BOT",
+        "timestamp": "1793787282",
+        "predicted": "500000000000000000",
+        "paid": "500000000000000000",
+        "match": true
+      },
+      {
+        "scheduleId": "1",
+        "asset": "BOT",
+        "timestamp": "1793787285",
+        "predicted": "502777777777777777",
+        "paid": "502777777777777777",
+        "match": true
+      },
+      {
+        "scheduleId": "1",
+        "asset": "BOT",
+        "timestamp": "1793787314",
+        "predicted": "8055555555555556",
+        "paid": "8055555555555556",
+        "match": true
+      },
+      {
+        "scheduleId": "1",
+        "asset": "BOT",
+        "timestamp": "1793787322",
+        "predicted": "2222222222222222",
+        "paid": "2222222222222222",
+        "match": true
+      },
+      {
+        "scheduleId": "4",
+        "asset": "vBOT",
+        "timestamp": "1793787338",
+        "predicted": "5175000000000000000",
+        "paid": "5175000000000000000",
+        "match": true
+      },
+      {
+        "scheduleId": "5",
+        "asset": "vBOT",
+        "timestamp": "1793787341",
+        "predicted": "5000000000000000000",
+        "paid": "5000000000000000000",
+        "match": true
+      }
+    ],
+    "finalState": {
+      "managerNativeBalance": "0.736944444444444445",
+      "managerTokenBalance": "4.825",
+      "nativeTotalFunded": "1.75",
+      "nativeTotalClaimed": "1.013055555555555555",
+      "nativeLiability": "0.736944444444444445",
+      "tokenTotalFunded": "15.0",
+      "tokenTotalClaimed": "10.175",
+      "tokenLiability": "4.825",
+      "beneficiaryOneBot": "0.534864373333333333",
+      "beneficiaryTwoBot": "0.529405562222222222",
+      "beneficiaryThreeBot": "0.02806382",
+      "beneficiaryOneToken": "5.175",
+      "beneficiaryThreeToken": "5.0"
+    },
+    "finishedAt": "2026-11-04T10:15:45.141Z"
+  }
+}
